@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./footer.module.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
 
 
 
 const Footer = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleNewsletterClick = () => {
+    setShowPopup(true);
+  };
+
+  
   return (
     <div className={styles.footer}>
       <h1 className={styles.headings}>Contact Me</h1>
@@ -33,8 +42,9 @@ const Footer = () => {
 
     <h1 className={styles.headings}> My Products </h1>
 
-    <h1 className={styles.headings}> Newsletter </h1>
+    <h1 className={styles.headings} onClick={handleNewsletterClick}> Newsletter </h1>
 
+    {showPopup && <NewsletterPopup onClose={setShowPopup} />}
 
     </div>
   );
