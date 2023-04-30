@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styles from "./newletter.module.css";
 
 
-//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
 
-//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
 const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(true);
 
