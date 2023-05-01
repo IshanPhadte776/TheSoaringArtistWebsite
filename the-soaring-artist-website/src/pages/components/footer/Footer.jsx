@@ -7,12 +7,20 @@ import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
 
 
 
-const Footer = () => {
+const Footer = ({ scrollToAboutMe, scrollToPaintings }) => {
 
   const [showPopup, setShowPopup] = useState(false);
 
   const handleNewsletterClick = () => {
-    setShowPopup(true);
+    setShowPopup((prevShowPopup) => !prevShowPopup);
+  };
+
+  const handleAboutMeClick = () => {
+    scrollToAboutMe();
+  };
+
+  const handlePaintingsClick = () => {
+    scrollToPaintings();
   };
 
   
@@ -34,13 +42,11 @@ const Footer = () => {
 
     <FaMapMarkerAlt className={styles.logo} />
 
-    <h1 className={styles.headings}> About Me </h1>
+    <h1 className={styles.headings} onClick={handleAboutMeClick} > About Me </h1>
 
-    <h1 className={styles.headings}> Q and A </h1>
+    <h1 className={styles.headings} onClick={handlePaintingsClick} > My Paintings </h1>
 
-    <h1 className={styles.headings}> My Art </h1>
-
-    <h1 className={styles.headings}> My Products </h1>
+    <h1 className={styles.headings}> My Instagram Feed </h1>
 
     <h1 className={styles.headings} onClick={handleNewsletterClick}> Newsletter </h1>
 

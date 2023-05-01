@@ -4,12 +4,17 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import NewsletterPopup from './components/newsletterPopup/NewsletterPopup'
 
+import Hero from './components/hero/Hero'
+
+
+
 import { useState, useEffect } from "react";
+import AboutMe from './components/aboutme/AboutMe'
+import Paintings from './components/paintings/Paintings'
 
 
 
 export default function Home() {
-
   const [showNewsletter, setShowNewsletter] = useState(false);
 
   useEffect(() => {
@@ -21,6 +26,21 @@ export default function Home() {
   }, []);
 
 
+
+  const scrollToAboutMe = () => {
+    const aboutMeElement = document.getElementById("aboutMe");
+    if (aboutMeElement) {
+      aboutMeElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToPaintings = () => {
+    const paintingElement = document.getElementById("paintings");
+    if (paintingElement) {
+      paintingElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Head>
@@ -28,11 +48,18 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-      <Header> </Header>
+      <Header scrollToAboutMe={scrollToAboutMe} scrollToPaintings={scrollToPaintings} />
+
+      <Hero> </Hero>
+
+      <AboutMe id="about-me-section" />
 
       {showNewsletter && <NewsletterPopup />}
 
-      <Footer> </Footer>
+      <Paintings id="painting-section" /> 
+
+      <Footer scrollToAboutMe={scrollToAboutMe}  scrollToPaintings={scrollToPaintings} > </Footer>
+
 
       </main>
     </>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans:wght@400;700&display=swap');
+
+
 .overlay {
     position: fixed;
     top: 0;
@@ -16,7 +19,86 @@
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* add a shadow effect */
-    z-index: 10000; /* set a higher z-index than the overlay */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    width: 500px; /* set a specific width for the pop-up */
+  }
+  
+  
+  .title {
+    text-align: center;
+    font-family: 'Vina Sans', sans-serif;
+  }
+
+  .subHeading {
+    text-align: center
+  }
+
+
+  .logo {
+    width: 80px;
+    height: 80px;
+
+  }
+
+  .row {
+    display: flex
+  }
+
+  .emailForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+
+  .emailForm input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+
+  }
+  
+  .emailForm button {
+    background-color: #13507C;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 30%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+  }
+  
+  
+  
+  .emailForm button:hover {
+    background-color: #0F3D5C;
+  }
+
+  .closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .closePopup:hover {
+    color: #0F3D5C; /* change color on hover if desired */
   }
   

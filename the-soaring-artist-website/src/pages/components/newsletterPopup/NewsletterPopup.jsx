@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styles from "./newletter.module.css";
 
+import Image from "next/image";
+import logo from "../../logo.png";
 
+import { FaTimes } from "react-icons/fa";
 
 const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -63,38 +66,42 @@ const NewsletterPopup = () => {
       {showPopup && (
         <div className={styles.overlay}>
           <div className={styles.popUp}>
-            <h1 className={styles.title}>Subscribe to the Newsletter</h1>
-            <h2 className={styles.subtitle}>
+            <div className={styles.row}>
+              <Image className={styles.logo} src={logo} alt="My Image" />
+              <h1 className={styles.title}>Subscribe to the Newsletter</h1>
+              <button className = {styles.closePopup} onClick={handleClosePopup}>
+                <FaTimes />
+              </button>
+            </div>
+            <h2 className={styles.subHeading}>Art. Painting. Merchandise.</h2>
+
+            <h2 className={styles.subHeading}>
               Provide your name and email address for exclusive information
             </h2>
 
             <form className={styles.emailForm} onSubmit={handleSubmit}>
               <label>
-                Email Address:
-                <input
-                  type="text"
-                  value={emailValue}
-                  onChange={handleEmailChange}
-                  autoComplete="email"
-                />
-              </label>
-
-              <label>
-                Name:
                 <input
                   type="text"
                   value={nameValue}
                   onChange={handleNameChange}
                   autoComplete="name"
+                  placeholder="Name"
+                />
+              </label>
+
+              <label>
+                <input
+                  type="text"
+                  value={emailValue}
+                  onChange={handleEmailChange}
+                  autoComplete="email"
+                  placeholder="Email"
                 />
               </label>
 
               <button type="submit">Submit</button>
             </form>
-
-            <button className={styles.closeButton} onClick={handleClosePopup}>
-              I don't wish for emails regarding The Soaring Artist
-            </button>
           </div>
         </div>
       )}
