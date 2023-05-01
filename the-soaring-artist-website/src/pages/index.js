@@ -11,6 +11,7 @@ import Hero from './components/hero/Hero'
 import { useState, useEffect } from "react";
 import AboutMe from './components/aboutme/AboutMe'
 import Paintings from './components/paintings/Paintings'
+import InstagramFeed from './components/instagram/InstagramFeed'
 
 
 
@@ -41,6 +42,13 @@ export default function Home() {
     }
   };
 
+  const scrollToInstagramFeed = () => {
+    const instagramFeedElement = document.getElementById("instagramFeed");
+    if (instagramFeedElement) {
+      instagramFeedElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Head>
@@ -48,17 +56,19 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-      <Header scrollToAboutMe={scrollToAboutMe} scrollToPaintings={scrollToPaintings} />
+      <Header scrollToAboutMe={scrollToAboutMe} scrollToPaintings={scrollToPaintings} scrollToInstagramFeed={scrollToInstagramFeed} />
 
       <Hero> </Hero>
 
-      <AboutMe id="about-me-section" />
+      <AboutMe />
 
       {showNewsletter && <NewsletterPopup />}
 
-      <Paintings id="painting-section" /> 
+      <Paintings /> 
 
-      <Footer scrollToAboutMe={scrollToAboutMe}  scrollToPaintings={scrollToPaintings} > </Footer>
+      <InstagramFeed   /> 
+
+      <Footer scrollToAboutMe={scrollToAboutMe}  scrollToPaintings={scrollToPaintings} scrollToInstagramFeed={scrollToInstagramFeed} > </Footer>
 
 
       </main>

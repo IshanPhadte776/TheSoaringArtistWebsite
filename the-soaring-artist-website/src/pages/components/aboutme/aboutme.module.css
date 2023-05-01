@@ -1,3 +1,7 @@
+.aboutMe {
+    height: 600px;
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .heading {
@@ -16,4 +21,54 @@
 
 .text {
     text-align: center;
+}
+
+.Arushi {
+    width: 20%;
+    height: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: flex;
+
+}
+
+.Owl {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #13507C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contactBox:hover {
+    background-color: #0F3D5C;
+    transform: translateY(-5px);
+  }
+
+
+.textWithinBox {
+    color: yellow;
+}
+
+.icon {
+    color: yellow;
 }

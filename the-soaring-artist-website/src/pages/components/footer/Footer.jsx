@@ -4,6 +4,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
+import Legal from "../legal/Legal.";
+//import { Route } from 'react-router-dom';
+
 
 
 
@@ -49,6 +52,13 @@ const Footer = ({ scrollToAboutMe, scrollToPaintings }) => {
     <h1 className={styles.headings}> My Instagram Feed </h1>
 
     <h1 className={styles.headings} onClick={handleNewsletterClick}> Newsletter </h1>
+
+    <p className= {styles.legal}> Legal </p>
+
+    {/* <div>
+      <Route path="/my-route" component={Legal} />
+    </div> */}
+
 
     {showPopup && <NewsletterPopup onClose={setShowPopup} />}
 

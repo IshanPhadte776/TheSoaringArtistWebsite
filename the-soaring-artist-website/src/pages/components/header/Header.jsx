@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
 import styles from "./Header.module.css";
 import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
+import Logo from "../../logo.png";
+import Image from "next/image";
 
-const Header = ({ scrollToAboutMe, scrollToPaintings }) => {
+const Header = ({ scrollToAboutMe, scrollToPaintings, scrollToInstagramFeed }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleNewsletterClick = () => {
@@ -17,16 +19,26 @@ const Header = ({ scrollToAboutMe, scrollToPaintings }) => {
     scrollToPaintings();
   };
 
+  const handleInstagramFeedClick = () => {
+    scrollToInstagramFeed();
+  };
 
   return (
     <div className={styles.header}>
       <div className={styles.row}>
-        <h1 className={styles.brandName}> The Soaring Artist</h1>
+        <div className={styles.logoAndName}>
+          <Image className={styles.logo} src={Logo} />
+          <h1 className={styles.brandName}> The Soaring Artist</h1>
+        </div>
+
         <h2 className={styles.subHeading} onClick={handleAboutMeClick}>
           About Me
         </h2>
-        <h2 className={styles.subHeading} onClick={handlePaintingsClick}> My Paintings </h2>
-        <h2 className={styles.subHeading}> My Instagram Feed </h2>
+        <h2 className={styles.subHeading} onClick={handlePaintingsClick}>
+          {" "}
+          My Paintings{" "}
+        </h2>
+        <h2 className={styles.subHeading} onClick={handleInstagramFeedClick}> My Instagram Feed </h2>
         <h2 className={styles.subHeading} onClick={handleNewsletterClick}>
           {" "}
           Newsletter{" "}

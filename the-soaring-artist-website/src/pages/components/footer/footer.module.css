@@ -4,6 +4,8 @@
 
 .headings {
     color: white;
+    cursor: pointer;
+
 }
 
 .logo {
@@ -15,3 +17,7 @@
 .logo:hover {
     transform: scale(1.2);
   }
+
+.legal {
+    color:white
+}
