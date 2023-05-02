@@ -1,19 +1,17 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
-import Footer from './components/footer/Footer'
-import Header from './components/header/Header'
-import NewsletterPopup from './components/newsletterPopup/NewsletterPopup'
+import Head from "next/head";
+import styles from "@/styles/Home.module.css";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import NewsletterPopup from "./components/newsletterPopup/NewsletterPopup";
 
-import Hero from './components/hero/Hero'
-
-
+import Hero from "./components/hero/Hero";
 
 import { useState, useEffect } from "react";
-import AboutMe from './components/aboutme/AboutMe'
-import Paintings from './components/paintings/Paintings'
-import InstagramFeed from './components/instagram/InstagramFeed'
+import AboutMe from "./components/aboutme/AboutMe";
+import Paintings from "./components/paintings/Paintings";
+import InstagramFeed from "./components/instagram/InstagramFeed";
 
-
+import Link from "next/link";
 
 export default function Home() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -25,8 +23,6 @@ export default function Home() {
 
     return () => clearTimeout(timeout);
   }, []);
-
-
 
   const scrollToAboutMe = () => {
     const aboutMeElement = document.getElementById("aboutMe");
@@ -55,23 +51,30 @@ export default function Home() {
         <title> The Soaring Artist</title>
       </Head>
       <main className={styles.main}>
+        <Header
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToPaintings={scrollToPaintings}
+          scrollToInstagramFeed={scrollToInstagramFeed}
+        />
 
-      <Header scrollToAboutMe={scrollToAboutMe} scrollToPaintings={scrollToPaintings} scrollToInstagramFeed={scrollToInstagramFeed} />
+        <Hero> </Hero>
 
-      <Hero> </Hero>
+        <AboutMe />
 
-      <AboutMe />
+        {showNewsletter && <NewsletterPopup />}
 
-      {showNewsletter && <NewsletterPopup />}
+        <Paintings />
 
-      <Paintings /> 
+        <InstagramFeed />
 
-      <InstagramFeed   /> 
-
-      <Footer scrollToAboutMe={scrollToAboutMe}  scrollToPaintings={scrollToPaintings} scrollToInstagramFeed={scrollToInstagramFeed} > </Footer>
-
-
+        <Footer
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToPaintings={scrollToPaintings}
+          scrollToInstagramFeed={scrollToInstagramFeed}
+        >
+          {" "}
+        </Footer>
       </main>
     </>
-  )
+  );
 }

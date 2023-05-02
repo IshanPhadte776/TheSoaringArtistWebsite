@@ -1,23 +1,48 @@
 .footer {
-    background-color: black;
+    background-color: rgb(25, 107, 147);
 }
 
 .headings {
     color: white;
     cursor: pointer;
+    margin-right: 15px;
 
 }
 
-.logo {
+.contactLogo {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease-out;
+    margin-right: 15px;
     color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
+  }
+  
 
-.logo:hover {
+.contactLogo:hover {
     transform: scale(1.2);
+    transform: translateY(-5px);
+
   }
 
+
+
 .legal {
-    color:white
+    color:white;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.rowForResources {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
 }
