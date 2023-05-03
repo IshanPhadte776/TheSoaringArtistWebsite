@@ -11,7 +11,6 @@ import AboutMe from "./components/aboutme/AboutMe";
 import Paintings from "./components/paintings/Paintings";
 import InstagramFeed from "./components/instagram/InstagramFeed";
 
-import Link from "next/link";
 
 export default function Home() {
   const [showNewsletter, setShowNewsletter] = useState(false);
@@ -44,6 +43,7 @@ export default function Home() {
       instagramFeedElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
 
   return (
     <>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./footer.module.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
 
 const Footer = ({ scrollToAboutMe, scrollToPaintings }) => {

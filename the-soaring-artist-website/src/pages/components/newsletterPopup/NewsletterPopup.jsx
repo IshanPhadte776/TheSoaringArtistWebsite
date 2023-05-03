@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./newletter.module.css";
 
 import Image from "next/image";
-import logo from "../../logo.png";
+import logo from "../../images/logo.png";
 
 import { FaTimes } from "react-icons/fa";
 
@@ -81,7 +81,7 @@ const NewsletterPopup = () => {
 
             <form className={styles.emailForm} onSubmit={handleSubmit}>
               <label>
-                <input
+                <input className= {styles.input}
                   type="text"
                   value={nameValue}
                   onChange={handleNameChange}
@@ -91,7 +91,7 @@ const NewsletterPopup = () => {
               </label>
 
               <label>
-                <input
+                <input className= {styles.input}
                   type="text"
                   value={emailValue}
                   onChange={handleEmailChange}
@@ -100,7 +100,7 @@ const NewsletterPopup = () => {
                 />
               </label>
 
-              <button type="submit">Submit</button>
+              <button className= {styles.input} type="submit">Submit</button>
             </form>
           </div>
         </div>

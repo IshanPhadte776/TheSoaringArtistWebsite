@@ -2,23 +2,22 @@ import React from "react";
 import styles from "./hero.module.css";
 
 import Image from "next/image";
-import llama from "../../llama.png";
-import owl from "../../owl.png";
-import bird2 from "../../bird2.png";
+import llama from "../../images/llama.png";
+import bird from "../../images/bird.png";
 
 const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.row}>
         <div className={styles.textStack}>
-          <h1> The Soaring Artist</h1>
-          <h1> Always Soaring Higher</h1>
-          <p> Local Artist Pursuing her Passion in Art</p>
+          <h1 className= {styles.title}> The Soaring Artist</h1>
+          <h1 className= {styles.title} > Always Soaring Higher</h1>
+          <p className= {styles.text}> Local Artist Pursuing her Passion in Art</p>
           <button className={styles.viewCollection}>
             {" "}
             View my Collection{" "}
           </button>
-          <Image className={styles.bird2} src={bird2} />
+          <Image className={styles.bird} src={bird} />
         </div>
         <div className={styles.llamaBackground}></div>
         <Image className={styles.llama} src={llama} alt="Llama" />

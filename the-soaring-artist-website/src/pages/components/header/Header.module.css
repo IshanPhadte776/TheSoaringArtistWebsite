@@ -1,7 +1,8 @@
 
-.header {
-    width: 100vw;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -11,8 +12,13 @@
 
 }
 
+.brandName {
+    font-family: 'Bebas Neue', cursive;
+}
+
 .subHeading {
     cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .logo {

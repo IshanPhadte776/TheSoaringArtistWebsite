@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./aboutme.module.css";
 
 import Image from "next/image";
-import Arushi from "../../Arushi.png";
-import Owl from "../../owl.png";
+import Arushi from "../../images/Arushi.png";
+import Owl from "../../images/owl.png";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 

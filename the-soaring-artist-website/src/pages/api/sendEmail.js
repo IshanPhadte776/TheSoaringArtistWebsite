@@ -1,7 +1,6 @@
 import sgMail from "@sendgrid/mail";
 
-//sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+sgMail.setApiKey('Blank')
 
 export default async function sendEmail(req, res) {
   if (req.method !== "POST") {
@@ -15,10 +14,10 @@ export default async function sendEmail(req, res) {
   // Send email using the @sendgrid/mail package
   const msg = {
     to: email,
-    from: "ishanphadte@gmail.com", // Replace with your own email address
+    from: "thesoaringartist@gmail.com", // Replace with your own email address
     subject: "The Soaring Artist Newsletter Subscription",
     text: `, ${name}!`,
-    html: `<p>It works, ${name}!</p>`,
+    html: `<p>Thanks for Subscribing to the Newsletter, ${name}!</p>`,
   };
 
   try {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "./Header.module.css";
 import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
-import Logo from "../../logo.png";
+import Logo from "../../images/logo.png";
 import Image from "next/image";
 
 const Header = ({ scrollToAboutMe, scrollToPaintings, scrollToInstagramFeed }) => {
