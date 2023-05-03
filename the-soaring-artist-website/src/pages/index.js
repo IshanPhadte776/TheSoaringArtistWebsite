@@ -48,6 +48,7 @@ export default function Home() {
     <>
       <Head>
         <title> The Soaring Artist</title>
+        <link rel="shortcut icon" href="logo.png" />
       </Head>
       <main className={styles.main}>
         <Header
