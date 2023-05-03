@@ -1,27 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./paintings.module.css";
 
 import Image from "next/image";
 import Owl from "../../images/owl.png";
 import Butterflies from "../../images/butterflies.png";
 import Flower from "../../images/flower.png";
-import Logo from "../../images/logo.png";
 
-// const fetch = require('node-fetch');
-// const sharp = require('sharp');
+
 
 const Paintings = () => {
 
 
-  
-  // async function processImage(url) {
-  //   const response = await fetch(url);
-  //   const buffer = await response.buffer();
-  //   const sharpImage = sharp(buffer);
-  //   // Apply any desired image processing operations here
-  //   const processedBuffer = await sharpImage.toBuffer();
-  //   // Return the processed buffer or save it to a file
-  // }
 
 
   const butterFlyPaintingText =
@@ -90,7 +79,6 @@ const Paintings = () => {
         </div>
       </div>
 
-      <div className="elfsight-app-c365c773-c0e7-4b9e-bb8f-40a72b6899c6"></div>
 
     </div>
   );

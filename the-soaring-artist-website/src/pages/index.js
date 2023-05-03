@@ -9,7 +9,6 @@ import Hero from "./components/hero/Hero";
 import { useState, useEffect } from "react";
 import AboutMe from "./components/aboutme/AboutMe";
 import Paintings from "./components/paintings/Paintings";
-import InstagramFeed from "./components/instagram/InstagramFeed";
 
 
 export default function Home() {
@@ -64,8 +63,6 @@ export default function Home() {
         {showNewsletter && <NewsletterPopup />}
 
         <Paintings />
-
-        <InstagramFeed />
 
         <Footer
           scrollToAboutMe={scrollToAboutMe}
