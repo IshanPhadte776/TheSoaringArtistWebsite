@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./legal.module.css";
 import Head from "next/head";
+import Link from 'next/link'
 
-
-BiLeftArrow;
 
 import { BiLeftArrow } from "react-icons/bi";
 
@@ -32,12 +31,13 @@ const Legal = () => {
 
       <p className={styles.text}>
         By Submitting personal information to the system, you agree to allow the author to store their data in-order to improve the user experience.
-        Data will not be shared with non-authorized users. We don't take responiblity or can be held liable for damages if the data is breached by third-parties
+        Data will not be shared with non-authorized users. We don ot take responiblity or can be held liable for damages if the data is breached by third-parties
       </p>    
 
-      <a href="/">
-        <BiLeftArrow className={styles.backArrow}> </BiLeftArrow>
-      </a>
+      <Link href="/" > <BiLeftArrow className={styles.backArrow}> </BiLeftArrow>  </Link>
+
+
+
     </div>
   );
 };

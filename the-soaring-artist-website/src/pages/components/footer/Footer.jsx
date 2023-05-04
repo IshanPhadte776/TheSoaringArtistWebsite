@@ -3,6 +3,8 @@ import styles from "./footer.module.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import NewsletterPopup from "../newsletterPopup/NewsletterPopup";
+import Link from 'next/link'
+
 
 const Footer = ({ scrollToAboutMe, scrollToPaintings }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -57,10 +59,11 @@ const Footer = ({ scrollToAboutMe, scrollToPaintings }) => {
         </div>
 
         <p>
-          <a className={styles.legal} href="/components/legal/Legal">
-            {" "}
-            © The Soaring Artist 2023 Legal
-          </a>
+
+          <Link  className={styles.legal} href="/components/legal/Legal" >© The Soaring Artist 2023 Legal </Link>
+
+
+
         </p>
 
         {showPopup && <NewsletterPopup onClose={setShowPopup} />}

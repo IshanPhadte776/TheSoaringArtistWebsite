@@ -17,7 +17,7 @@ const Hero = () => {
             {" "}
             View my Collection{" "}
           </button>
-          <Image className={styles.bird} src={bird} />
+          <Image className={styles.bird} src={bird} alt = "Bird"/>
         </div>
         <div className={styles.llamaBackground}></div>
         <Image className={styles.llama} src={llama} alt="Llama" />

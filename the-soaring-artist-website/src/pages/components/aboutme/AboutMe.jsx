@@ -56,19 +56,17 @@ const AboutMe = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  },);
 
   return (
     <div id="aboutMe" className={styles.aboutMe}>
       <div className={styles.row}>
-        <Image className={styles.Arushi} src={Arushi} />
+        <Image className={styles.Arushi} src={Arushi} alt="Arushi" />
         <div className={styles.column}>
           <h1 className={styles.heading}>{text}</h1>
 
           <p className={styles.text}>
-            {" "}
-            My Name is Arushi and I'm an inspiring 15 year old artist from
-            Burlington Ontario
+            My Name is Arushi and I am an inspiring 15 year old artist from Burlington Ontario
           </p>
 
           <p className={styles.text}> INSERT MORE TEXT HERE </p>
@@ -93,7 +91,7 @@ const AboutMe = () => {
             </a>
           </div>
 
-          <Image className={styles.Owl} src={Owl} />
+          <Image className={styles.Owl} src={Owl} alt="Owl" />
         </div>
       </div>
     </div>

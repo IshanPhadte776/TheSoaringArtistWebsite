@@ -35,7 +35,7 @@ const Paintings = () => {
           <div className={styles.flipCard}>
             <div className={styles.flipCardInner}>
               <div className={styles.flipCardBack}>
-                <Image src={Flower} className={styles.flowerPainting} />
+                <Image src={Flower} className={styles.flowerPainting} alt="Flower" />
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Paintings = () => {
           <div className={styles.flipCard}>
             <div className={styles.flipCardInner}>
               <div className={styles.flipCardBack}>
-                <Image src={Butterflies} className={styles.butterflyPainting} />
+                <Image src={Butterflies} className={styles.butterflyPainting} alt="Butterfly" />
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Paintings = () => {
           <div className={styles.flipCard}>
             <div className={styles.flipCardInner}>
               <div className={styles.flipCardBack}>
-                <Image src={Owl} className={styles.owlPainting} />
+                <Image src={Owl} className={styles.owlPainting} alt="Owl"/>
               </div>
             </div>
           </div>

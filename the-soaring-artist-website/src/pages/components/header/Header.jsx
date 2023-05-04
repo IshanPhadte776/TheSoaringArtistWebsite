@@ -27,7 +27,7 @@ const Header = ({ scrollToAboutMe, scrollToPaintings, scrollToInstagramFeed }) =
     <div className={styles.header}>
       <div className={styles.row}>
         <div className={styles.logoAndName}>
-          <Image className={styles.logo} src={Logo} />
+          <Image className={styles.logo} src={Logo} alt="Logo"/>
           <h1 className={styles.brandName}> The Soaring Artist</h1>
         </div>
 
