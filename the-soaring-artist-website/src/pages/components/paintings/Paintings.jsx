@@ -30,7 +30,7 @@ const Paintings = () => {
     <div id="paintings" className={styles.paintings}>
       <h1 className={styles.title}> My Collection </h1>
 
-      <div class={styles.outerBox}>
+      <div className={styles.outerBox}>
         <div className={styles.row}>
           <div className={styles.flipCard}>
             <div className={styles.flipCardInner}>
